@@ -1,0 +1,29 @@
+:root1{
+    --color-rosa-claro:#F0B4D3;
+    --color-salmon:#F99394;
+    --color-rosa-oscuro:#F481D6;
+    --color-turquesa:#4DA9DB;
+    --color-fucsia:#DC76C3;
+    --color-lila:#C56CF6;
+    --color-lila-oscuro:#976CEF;
+    --color-fucsia-oscuro:#CD5F94;
+    --color-violeta:#8D5E88;
+    --color-morado:#512F6C;
+    --color-gris-claro:#242730;
+    --color-gris-oscuro:#27232F;
+    --color-negro-claro:#151923;
+    --color-negro-oscuro:#0D0F1A;
+}
+
+.main-bg {
+  height: 1000px;
+  width: 100vw;
+  background: url(../Assets/img/movimiento_de_musica.gif);
+}
+
+
+.bg-form {
+    background-color:
+    rgb(13,15,26);
+    background: linear-gradient(90deg, rgba(13,15,26,1) 15%, rgba(39,35,47,1) 35%, rgba(141,94,136,1) 48%, rgba(244,129,214,1) 71%, rgba(249,147,148,1) 82%);;
+}
