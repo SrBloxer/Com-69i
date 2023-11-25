@@ -13,7 +13,7 @@ footerContainer.innerHTML =`
         <h5 class="mb-2">Tu cuenta</h5>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <a href="./pages/error-404.html" class="text-footer text-decoration-none fs-5">Registrate</a>
+            <a href="../pages/register.html" class="text-footer text-decoration-none fs-5">Registrate</a>
           </li>
           <li class="mb-2">
             <a href="./pages/Planes.html" class="text-footer text-decoration-none fs-5">Administra tu cuenta</a>
@@ -30,7 +30,7 @@ footerContainer.innerHTML =`
             <a href="./pages/Contacto.html" class="text-footer text-decoration-none text-dec-hover   fs-5">Contactanos</a>
           </li>
           <li class="mb-2">
-            <a href="./pages/nosotros.html" class="text-footer text-decoration-none fs-5">Quienes somos</a>
+            <a href="../pages/nosotros.html" class="text-footer text-decoration-none fs-5">Quienes somos</a>
           </li>
         </ul>
       </div>  
