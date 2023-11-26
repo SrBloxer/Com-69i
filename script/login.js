@@ -18,9 +18,12 @@ const validateFields = () => {
   }
 
 const handleChange = (event) => {
-    if (!regexLoginEmail) {
+    if (!regexLoginUser) {
+    alert ('ingrese un usuario o contraseña válida')
+    } else {
+    alert ('ingrese un usuario o contraseña válida')
+  }
 
-    }
   }
   
   const handleSubmit = (event) => {

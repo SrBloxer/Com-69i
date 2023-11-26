@@ -52,12 +52,12 @@ const tableContainer = document.getElementById('tableContainer')
 musics.map((song,index)=>{
   tableContainer.innerHTML += `
   <tr>
-    <th scope="row">${index}</th>
-    <td>${song.songname}</td>
-    <td>${song.artist}</td>
-    <td>${song.length}</td>
-    <td><a href="#"><i class="bi bi-pencil-square"></i></a></td>
-    <td><a href="#"><i class="bi bi-trash"></i></a></td>
+    <th scope="row" class="bg-table text-white">${index}</th>
+    <td class="bg-table text-white">${song.songname}</td>
+    <td class="bg-table text-white">${song.artist}</td>
+    <td class="bg-table text-white">${song.length}</td>
+    <td class="bg-table text-white"><a href="#"><i class="bi bi-pencil-square" desable></i></a></td>
+    <td class="bg-table text-white"><a href="#" role="button" onclick="deleteSong(${index})"><i class="bi bi-trash"></i></a></td>
   </tr>
   `
 })
@@ -129,7 +129,6 @@ const handleChange = (event) => {
 const handleSubmit = (event) => {
     event.preventDefault();
     const saveSong = JSON.parse(localStorage.getItem('storagemusic'));
-    console.log(saveSong)
     if (saveSong) {
       saveSong.push(newSong);
       const jsonSong = JSON.stringify(saveSong)
@@ -143,3 +142,11 @@ const handleSubmit = (event) => {
       window.location.reload()
     }
   }
+
+  const deleteSong = (index) => {
+    const saveSong = JSON.parse(localStorage.getItem('storagemusic')) || musics;
+    saveSong.splice(index, 1);
+    const jsonSong = JSON.stringify(saveSong)
+    localStorage.setItem('storagemusic', jsonSong)
+    window.location.reload()
+  }  
