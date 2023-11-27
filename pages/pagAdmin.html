@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Valeria Latapie, Ana Sofia Cesca, Santiago Gil Mina, Juan Robledo">
+    <meta name="description" content="music">
+    <meta name="keywords" content="canciones, música, sugeridos, artistas">
+    <link rel="shortcut icon" href="../Assets/icon/ms-icon-310x310.png" type="image/x-icon">
+    <title>Music Code</title>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Styles/footer.css">
+    <link rel="stylesheet" href="../Styles/nav.css">
+    <link rel="stylesheet" href="../Styles/Admin.css">
+</head>
+<body>
+    <header id="navContainer"></header>
+    <main class="">
+      <div class="main-container w-30 rounded py-2 table-responsive">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end me-2 bg-dark">
+          <a href="" data-bs-toggle="modal" data-bs-target="#addModal" class="text-white">Agregar canción</a>
+        </div>
+        <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content bg-modal">
+                <div class="modal-header bg-modal">
+                  <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Agregar canción</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body rounded-bottom bg-modal">
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="mb-3">
+                            <label for="songName" class="form-label text-white">Nombre de la canción</label>
+                            <input type="text" class="form-control" id="songName" minlength="2" maxlength="40" required onchange="handleChange(event)">
+                            <label for="songArtist" class="form-label text-white">Artista</label>
+                            <input type="text" class="form-control" id="songArtist" minlength="2" maxlength="40" required onchange="handleChange(event)">
+                            <label for="songLength" class="form-label text-white">Duración</label>
+                            <input type="text" class="form-control" id="songLength" minlength="2" maxlength="6" required onchange="handleChange(event)">
+                            <label for="songImg" class="form-label text-white">Imagen</label>
+                            <input type="text" class="form-control" id="songImg" minlength="4" maxlength="50" required onchange="handleChange(event)">
+                            <label for="songAudio" class="form-label text-white">Ingresa URL de la canción</label>
+                            <input type="text" class="form-control" id="songAudio" minlength="5" maxlength="100" required onchange="handleChange(event)">
+                            <label for="songDate" class="form-label text-white">Año de lanzamiento</label>
+                            <input type="text" class="form-control" id="songDate" minlength="2" maxlength="32" required onchange="handleChange(event)">
+                          </div>
+                  </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end p-3">
+                          <button type="button" class="btn me-md-2 btn-outline-danger btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                          <button type="submit" class="btn btn-outline-primary btn-dark">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+        <table class="table bg-table table-responsive">
+            <thead class="bg-table">
+              <tr class="bg-table">
+                <th scope="col" class="bg-table text-white">ID</th>
+                <th scope="col" class="bg-table text-white">Nombre</th>
+                <th scope="col" class="bg-table text-white">Artista</th>
+                <th scope="col" class="bg-table text-white">Duración</th>
+                <th scope="col" class="bg-table text-white">Editar</th>
+                <th scope="col" class="bg-table text-white">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody id="tableContainer">
+            </tbody>
+          </table>
+      </main>
+      <footer class="container-fluid text-center text-lg-start text-white  ">
+        <div 
+          id="footerContainer">
+        </div>    
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="../script/app.js"></script>
+      <script src="../script/Admin.js"></script>
+      <script src="../script/nav.js"></script>
+      <script src="../script/footer.js"></script>
+</body>
+</html>
